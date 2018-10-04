@@ -8,26 +8,57 @@ namespace MoreSolving
     {
         public int Sum(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int total = 0;
+            foreach (int number in numbers)
+            {
+                total += number;
+
+            }
+            return total;
         }
 
         public int SumEvens(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int total = 0;
+            foreach (int number in numbers)
+            {
+                if (number % 2 == 0)
+                {
+                    total += number;
+                }
+            }
+            return total;
         }
 
         public double AverageEvens(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int sumEvens = SumEvens(numbers);
+            int countEvens = 0;
+            foreach (int number in numbers)
+            {
+                if (number % 2 == 0)
+                {
+                    countEvens += 1;
+                }
+            }
+            return sumEvens / countEvens;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (var num in numbers)
+            {
+                if (sum % 2 != 0)
+                {
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         public int SumNegativeNumbers(int[] numbers)
@@ -50,8 +81,17 @@ namespace MoreSolving
 
         public string[] MakeElementsUppercase(string[] values)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            if (values == null)
+            {
+                return null;
+            }
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                values[i] = values[i].ToUpper();
+            }
+
+            return values;
         }
     }
 }
