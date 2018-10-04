@@ -44,7 +44,7 @@ namespace MoreSolving
             return sumEvens / countEvens;
         }
 
-        public bool IsSumOdd(List<int> numbers)
+        public bool isSumOdd(List<int> numbers)
         {
             int sum = 0;
             foreach (var num in numbers)
@@ -52,14 +52,10 @@ namespace MoreSolving
                 if (sum % 2 != 0)
                 {
                     return true;
-
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
-        }
+        }   
 
         public int SumNegativeNumbers(int[] numbers)
         {
@@ -69,8 +65,14 @@ namespace MoreSolving
 
         public bool ContainsTrue(bool[] values)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            foreach (bool value in values)
+            {
+                if (value)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool ContainsEven(int[] numbers)
