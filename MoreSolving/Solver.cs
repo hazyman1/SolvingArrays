@@ -59,8 +59,15 @@ namespace MoreSolving
 
         public int SumNegativeNumbers(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int total = 0;
+            foreach (int number in numbers)
+            {
+                if (number % 2 == 0)
+                {
+                    total += number;
+                }
+            }
+            return total;
         }
 
         public bool ContainsTrue(bool[] values)
@@ -77,9 +84,12 @@ namespace MoreSolving
 
         public bool ContainsEven(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            foreach (bool value in values)
+            {
+                return true
+            }
         }
+        return false
 
         public string[] MakeElementsUppercase(string[] values)
         {
