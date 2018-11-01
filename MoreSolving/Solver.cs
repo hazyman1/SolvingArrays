@@ -86,7 +86,7 @@ namespace MoreSolving
         {
             foreach (bool value in values)
             {
-                return true
+                return true;
             }
         }
         return false
@@ -104,6 +104,32 @@ namespace MoreSolving
             }
 
             return values;
+        }
+        bool ContainsAFalse(bool[] vals)
+        {
+
+        }
+        decimal LastElementMinusFirstElement(decimal[] nums)
+        {
+            if (nums == null)
+            {
+                return 0;
+            }
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+        }
+        public static bool containsEven (int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers % 2 = 0)
+                {
+                    return true;
+                }
+                return false;
+            }
         }
     }
 }
